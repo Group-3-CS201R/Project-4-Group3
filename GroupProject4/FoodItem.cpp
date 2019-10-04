@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// constructor that creates a new food object with a given name, price, and sets the number of this item that is available
 FoodItem::FoodItem(string name, double price) {
 	maxItems = 10;
 	itemName = name;
@@ -12,6 +13,7 @@ FoodItem::FoodItem(string name, double price) {
 	numItems = 5;
 }
 
+// default constructor. necessary to use vectors/arrays elsewhere in the Storage module
 FoodItem::FoodItem() {
 	maxItems = 10;
 	itemName = "empty";
@@ -43,12 +45,18 @@ void FoodItem::restockItem() {
 	numItems = maxItems;
 }
 
+// removes one from the count of the item if it is greater than 0 or leaves it at 0 otherwise. Returns no value
 void FoodItem::removeItem() {
 	if (numItems > 0) {
 		numItems--;
 	}
+	else {
+		numItems = 0;
+	}
 }
 
+// FIXME: Might need to be removed
+// checks if the item is out of stock. returns true if is, false otherwise
 bool FoodItem::isOut() {
 	if (numItems == 0) {
 		return true;

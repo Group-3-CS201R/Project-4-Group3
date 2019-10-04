@@ -1,12 +1,2 @@
 ﻿  GroupProject4.cpp
-  Storage.cpp
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(14): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(27): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(28): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(39): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(40): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(55): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\storage.cpp(56): warning C4018: '<': signed/unsigned mismatch
-  UserInterface.cpp
-  Generating Code...
   GroupProject4.vcxproj -> \\kc.umkc.edu\kc-users\home\g\gjn96p\My Documents\GroupProject4\Debug\GroupProject4.exe

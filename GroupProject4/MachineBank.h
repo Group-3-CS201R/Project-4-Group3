@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 
+// See corresponding .cpp for thorough comments of what these functions are respoonsible for
+
 class MachineBank {
 public:
 	MachineBank();
@@ -19,6 +21,7 @@ private:
 	int numNickels;
 	int numPennies;
 	double bankTotal;
+	double totalProfits;
 };
 
 #endif

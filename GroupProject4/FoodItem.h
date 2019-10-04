@@ -6,6 +6,8 @@
 
 using namespace std;
 
+// See corresponding .cpp file for more detailed comments about functionality
+
 class FoodItem {
 public:
 	FoodItem();
