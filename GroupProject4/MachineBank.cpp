@@ -8,7 +8,7 @@ using namespace std;
 
 // Constructor for MachineBank that sets the bank to it's initial state
 MachineBank::MachineBank() {
-	numTwenties = 0;
+	numTwenties = 0; // I'd recomend changing this to tens
 	numFives = 0;
 	numOnes = 0;
 	numQuarters = 50;

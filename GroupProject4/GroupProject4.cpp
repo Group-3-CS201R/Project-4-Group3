@@ -10,12 +10,14 @@
 using namespace std;
 
 int main() {
+	/*
 	string userInput;
 	userInput = "p";
 	MachineBank vendingMachineBank = MachineBank();
 	Storage vendingStorageSystem = Storage();
 	vendingStorageSystem.FillItemArray();
 
+	
 	while (userInput != "q" && userInput != "Q") {
 
 		cout << vendingMachineBank.getTotal() << endl;
@@ -32,5 +34,11 @@ int main() {
 		cout << "Would you like to purchase another item? Press Q(q) to quit the program --> " << endl;
 		cin >> userInput;
 	}
+	*/
+
+	// I put all of your tests in comments and left them above
+	UserInterface vendingUI = UserInterface();
+	vendingUI.selectionMenu();
+	 
 	return 0;
 }
