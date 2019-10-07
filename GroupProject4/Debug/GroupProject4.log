@@ -1,8 +1,2 @@
-﻿  UserInterface.cpp
-C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\GroupProject4\UserInterface.cpp(75,20): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\GroupProject4\UserInterface.cpp(76,21): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\GroupProject4\UserInterface.cpp(85,6): warning C4101:  'row': unreferenced local variable
-C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\GroupProject4\UserInterface.cpp(146,14): warning C4101:  'error': unreferenced local variable
-C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\GroupProject4\UserInterface.cpp(168,21): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\GroupProject4\UserInterface.cpp(169,22): warning C4018:  '<': signed/unsigned mismatch
-  GroupProject4.vcxproj -> C:\Users\Nolan\Documents\CS201R\Project-4-Group3-master\Debug\GroupProject4.exe
+﻿  MachineBank.cpp
+  GroupProject4.vcxproj -> \\kc.umkc.edu\kc-users\home\g\gjn96p\My Documents\GroupProject4\Debug\GroupProject4.exe

@@ -1,5 +1,5 @@
 #include "pch.h"
-
+#include <cmath>
 #include <iostream>
 #include <vector>
 #include "MachineBank.h"
@@ -8,9 +8,6 @@ using namespace std;
 
 // Constructor for MachineBank that sets the bank to it's initial state
 MachineBank::MachineBank() {
-	numTwenties = 0; // I'd recomend changing this to tens
-	numFives = 0;
-	numOnes = 0;
 	numQuarters = 50;
 	numDimes = 50;
 	numNickels = 50;
@@ -44,37 +41,38 @@ void MachineBank::calculateChange(double amountDue, double amountGiven) {
 	int nickelsChange = 0;
 	int penniesChange = 0;
 	// loop continues until the the amount to withdraw(the change due) is payed back to the user
-	while (toWithdraw >= 0.01) {
+	while (toWithdraw > 0) {
 		// the following branches take the largest coinage amount to pay back the amount of change due until
 		// either the amount due is less than that coinage amount or the bank is out of that particular coin type
-		if (toWithdraw >= .25 && numQuarters >= 1) {
+		if (toWithdraw >= 0.25) {
 			toWithdraw -= 0.25;
 			numQuarters--;
 			quartersChange++;
 			bankTotal -= 0.25;
 		}
-		else if (toWithdraw >= 0.10 && numDimes >= 1) {
+		else if (toWithdraw >= 0.10) {
 			toWithdraw -= 0.10;
 			numDimes--;
 			dimesChange++;
 			bankTotal -= 0.10;
 		}
-		else if (toWithdraw >= 0.05 && numNickels >= 1) {
+		else if (toWithdraw >= 0.05) {
 			toWithdraw -= 0.05;
 			numNickels--;
 			nickelsChange++;
 			bankTotal -= 0.05;
 		}
-		else if (toWithdraw >= 0.01 && numPennies >= 1) {
+		else {
 			toWithdraw -= 0.01;
 			numPennies--;
 			penniesChange++;
 			bankTotal -= 0.01;
 		}
 	}
+	cout << toWithdraw << endl;
 	// prints out the total coinage used to pay back the customer
 	cout << "Total coinage returned is: Quarters -> " << quartersChange << " Dimes -> " << dimesChange;
-	cout << " Nickels -> " << nickelsChange << " Pennies -> " << penniesChange << endl;
+	cout << " Nickels -> " << nickelsChange << " Pennies -> " << penniesChange << endl << endl;
 }
 
 

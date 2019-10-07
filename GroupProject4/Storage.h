@@ -18,8 +18,6 @@ public:
 	void ReplenishItemAmount(string name);
 	vector<vector<FoodItem>> getVect();
 	double getItemCost(string name);
-	//FIXME: NEEDS TO BE REMOVED BEFORE SUBMITTING. THIS IS HERE FOR TESTING PURPOSES ONLY
-	void TestPrintVect(vector<vector<FoodItem>> toPrint);
 private:
 	vector<vector<FoodItem> > rowColVector;
 };

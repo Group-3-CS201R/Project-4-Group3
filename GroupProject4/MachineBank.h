@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 
 // See corresponding .cpp for thorough comments of what these functions are respoonsible for
 
@@ -13,9 +14,6 @@ public:
 	void replenishFunds();
 	double getTotal();
 private:
-	int numTwenties;
-	int numFives;
-	int numOnes;
 	int numQuarters;
 	int numDimes;
 	int numNickels;

@@ -40,15 +40,6 @@ void Storage::FillItemArray() {
 	}
 }
 
-//FIXME: THIS IS FOR TESTING ONLY. MUST REMOVE BEFORE SUBMITTING
-void Storage::TestPrintVect(vector<vector<FoodItem>> toPrint) {
-	for (int i = 0; i < toPrint.size(); ++i) {
-		for (int j = 0; j < toPrint.at(0).size(); ++j) {
-			cout << toPrint.at(i).at(j).getName() << " " << toPrint.at(i).at(j).getPrice() << " " << toPrint.at(i).at(j).getNumItem() << endl;
-		}
-	}
-}
-
 // returns the rowColVector to be used elseswhere in the UserInterface module
 vector<vector<FoodItem>> Storage::getVect() {
 	return rowColVector;

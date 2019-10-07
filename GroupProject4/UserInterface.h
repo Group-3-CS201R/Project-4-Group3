@@ -10,18 +10,18 @@
 using namespace std;
 
 class UserInterface {
-public:
-	int getChoice();
-	void selectionMenu();
-	void DisplayItems(vector<vector<FoodItem>> inventory);
-	vector<int> ItemSelection();
-	void ItemPurchase(vector<vector<FoodItem>> inventory, vector<int> location);
-	int GetPayment();
-	int GetInt();
+	public:
+		UserInterface(Storage storageSystem, MachineBank bankingSystem);
+		UserInterface();
+		int getChoice();
+		void selectionMenu();
+		void DisplayItems(vector<vector<FoodItem>> inventory);
+		string ItemSelection(vector<vector<FoodItem>> inventory);
+		void ItemPurchase(vector<vector<FoodItem>> inventory, string name);
+		bool IsValid(vector<vector<FoodItem>> inventory, string name);
 	private:
-	void ItemRestock(vector<vector<FoodItem>> inventory);
-	int RestockMenu();
-	int GetQuantity();
+		Storage vendingStorage;
+		MachineBank vendingBank;
 };
 
 #endif
