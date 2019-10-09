@@ -17,8 +17,8 @@ FoodItem::FoodItem(string name, double price) {
 FoodItem::FoodItem() {
 	maxItems = 10;
 	itemName = "empty";
-	itemPrice = 0;
-	numItems = 0;
+	itemPrice = 5;
+	numItems = 5;
 }
 
 void FoodItem::setName(string name) {
@@ -55,7 +55,6 @@ void FoodItem::removeItem() {
 	}
 }
 
-// FIXME: Might need to be removed
 // checks if the item is out of stock. returns true if is, false otherwise
 bool FoodItem::isOut() {
 	if (numItems == 0) {

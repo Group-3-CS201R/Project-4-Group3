@@ -13,6 +13,7 @@ public:
 	void calculateChange(double amountDue, double amountGiven);
 	void replenishFunds();
 	double getTotal();
+	bool needsRestock();
 private:
 	int numQuarters;
 	int numDimes;

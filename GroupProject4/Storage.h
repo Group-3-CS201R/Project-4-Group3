@@ -18,6 +18,7 @@ public:
 	void ReplenishItemAmount(string name);
 	vector<vector<FoodItem>> getVect();
 	double getItemCost(string name);
+	int getItemStock(string name);
 private:
 	vector<vector<FoodItem> > rowColVector;
 };

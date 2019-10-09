@@ -17,7 +17,7 @@ class UserInterface {
 		void selectionMenu();
 		void DisplayItems(vector<vector<FoodItem>> inventory);
 		string ItemSelection(vector<vector<FoodItem>> inventory);
-		void ItemPurchase(vector<vector<FoodItem>> inventory, string name);
+		void ItemPurchase( string name);
 		bool IsValid(vector<vector<FoodItem>> inventory, string name);
 	private:
 		Storage vendingStorage;

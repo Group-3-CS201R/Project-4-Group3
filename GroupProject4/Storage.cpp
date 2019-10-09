@@ -84,3 +84,13 @@ double Storage::getItemCost(string name) {
 		}
 	}
 }
+
+int Storage::getItemStock(string name) {
+	for (int i = 0; i < rowColVector.size(); ++i) {
+		for (int j = 0; j < rowColVector.at(0).size(); ++j) {
+			if (rowColVector.at(i).at(j).getName() == name) {
+				return rowColVector.at(i).at(j).getNumItem();
+			}
+		}
+	}
+}

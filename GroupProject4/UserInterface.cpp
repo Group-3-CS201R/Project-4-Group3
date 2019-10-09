@@ -47,7 +47,7 @@ void UserInterface::selectionMenu() { // uses menu choices to select the correct
 			break;
 		case 2: 
 			itemName = ItemSelection(vendingStorage.getVect());
-			ItemPurchase(vendingStorage.getVect(), itemName);
+			ItemPurchase(itemName);
 			break;
 		case 3: cout << "\nHave a great day!\n";
 			break;
@@ -91,10 +91,13 @@ bool UserInterface::IsValid(vector<vector<FoodItem>> inventory, string name) { /
 	return false;
 }
 
-//FIXME: Needs to purchase item, but might already have this written.
-void UserInterface::ItemPurchase(vector<vector<FoodItem>> inventory, string name) {  // takes an item to get its price and checks if there is enough money before vending, showing in suffiecent funds, or out of stock
+void UserInterface::ItemPurchase( string name) {  // takes an item to get its price and checks if there is enough money before vending, showing in suffiecent funds, or out of stock
 	double amountPayed;
 	cout << fixed << setprecision(2);
+	if (vendingStorage.getItemStock(name) == 0) {
+		cout << "Sorry, the machine is out of this item." << endl << endl;
+		return;
+	}
 	cout << "Please insert at least $" << vendingStorage.getItemCost(name) << endl;
 	cin >> amountPayed;
 	if (amountPayed >= vendingStorage.getItemCost(name)) {

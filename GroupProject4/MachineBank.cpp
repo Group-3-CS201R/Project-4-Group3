@@ -35,44 +35,34 @@ void MachineBank::calculateChange(double amountDue, double amountGiven) {
 	// total profits is tracked by keeping track of the amount due for each item purchased
 	totalProfits += amountDue;
 	// temporary variables to track the number of each coin type needed to give the customer their change due
-	double toWithdraw = changeTotal;
-	int quartersChange = 0;
-	int dimesChange = 0;
-	int nickelsChange = 0;
-	int penniesChange = 0;
-	// loop continues until the the amount to withdraw(the change due) is payed back to the user
-	while (toWithdraw > 0) {
-		// the following branches take the largest coinage amount to pay back the amount of change due until
-		// either the amount due is less than that coinage amount or the bank is out of that particular coin type
-		if (toWithdraw >= 0.25) {
-			toWithdraw -= 0.25;
-			numQuarters--;
-			quartersChange++;
-			bankTotal -= 0.25;
-		}
-		else if (toWithdraw >= 0.10) {
-			toWithdraw -= 0.10;
-			numDimes--;
-			dimesChange++;
-			bankTotal -= 0.10;
-		}
-		else if (toWithdraw >= 0.05) {
-			toWithdraw -= 0.05;
-			numNickels--;
-			nickelsChange++;
-			bankTotal -= 0.05;
-		}
-		else {
-			toWithdraw -= 0.01;
-			numPennies--;
-			penniesChange++;
-			bankTotal -= 0.01;
-		}
-	}
-	cout << toWithdraw << endl;
+	if (needsRestock()) replenishFunds();
+	long long toWithdraw = (changeTotal * 100) + 0.05;
+	int quartersChange = toWithdraw / 25;
+	toWithdraw %= 25;
+	numQuarters -= quartersChange;
+	bankTotal -= (0.25 * quartersChange);
+	int dimesChange = toWithdraw / 10;
+	toWithdraw %= 10;
+	numDimes -= dimesChange;
+	bankTotal -= (0.10 * dimesChange);
+	int nickelsChange = toWithdraw / 5;
+	toWithdraw %= 5;
+	numNickels -= nickelsChange;
+	bankTotal -= (0.05 * nickelsChange);
+	int penniesChange = toWithdraw % 5;
+	numPennies -= (0.01 * penniesChange);
+	bankTotal -= 0.01;
 	// prints out the total coinage used to pay back the customer
 	cout << "Total coinage returned is: Quarters -> " << quartersChange << " Dimes -> " << dimesChange;
 	cout << " Nickels -> " << nickelsChange << " Pennies -> " << penniesChange << endl << endl;
+}
+
+bool MachineBank::needsRestock() {
+	if (numQuarters <= 10 || numDimes <= 10 || numNickels <= 10 || numPennies <= 10)
+	{
+		return true;
+	}
+	return false;
 }
 
 
