@@ -12,7 +12,6 @@ using namespace std;
 class UserInterface {
 	public:
 		UserInterface(Storage storageSystem, MachineBank bankingSystem);
-		UserInterface();
 		int getChoice();
 		void selectionMenu();
 		void DisplayItems(vector<vector<FoodItem>> inventory);

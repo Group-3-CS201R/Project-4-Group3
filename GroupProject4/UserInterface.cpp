@@ -15,10 +15,6 @@ UserInterface::UserInterface(Storage storageSystem, MachineBank bankingSystem) {
 	vendingBank = bankingSystem;
 }
 
-UserInterface::UserInterface() {
-
-}
-
 int UserInterface::getChoice() {  // gets a menu choice from the user
 	int choice = 0;
 	while ((choice < 1) || (choice > 3)) {

@@ -1,6 +1,8 @@
-﻿  UserInterface.cpp
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(62): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(63): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(84): warning C4018: '<': signed/unsigned mismatch
-\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(85): warning C4018: '<': signed/unsigned mismatch
+﻿  GroupProject4.cpp
+  UserInterface.cpp
+\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(58): warning C4018: '<': signed/unsigned mismatch
+\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(59): warning C4018: '<': signed/unsigned mismatch
+\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(80): warning C4018: '<': signed/unsigned mismatch
+\\kc.umkc.edu\kc-users\home\g\gjn96p\my documents\groupproject4\groupproject4\userinterface.cpp(81): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   GroupProject4.vcxproj -> \\kc.umkc.edu\kc-users\home\g\gjn96p\My Documents\GroupProject4\Debug\GroupProject4.exe
